@@ -95,11 +95,24 @@ img{
     .explore{
         display:flex;
         padding:10px;
+        color:black;
     }
-    .btn , .btn-brand{
-        
-    }
+  
 }
+
+@media (max-width:680px){
+    .explore{
+        display:flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-top:30px;
+        padding:20px;
+        font-size: 30px;
+    }
+
+}
+
 @media(min-width:992px)
 {
     .explore{
@@ -140,7 +153,8 @@ img{
    background-color:#deff58;
    color:#022a30;
 }
-.link-custom{
+
+/* .link-custom{
     font-weight: 700;
     position:relative;
 
@@ -155,7 +169,7 @@ img{
     top:110%;
     transition:all 0.4s;
 
-}
+} */
 
 .card-custom:hover .card-custom-image img{
     transform: scale(1.1);
