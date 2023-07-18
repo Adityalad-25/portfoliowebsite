@@ -91,8 +91,21 @@ img{
 .navbar .nav-link.active{
     color:#deff58;
 }
+@media(max-width:768px){
+    .explore{
+        display:flex;
+        padding:10px;
+    }
+    .btn , .btn-brand{
+        
+    }
+}
 @media(min-width:992px)
 {
+    .explore{
+        display:flex;
+        padding:10px;
+    }
     .navbar{
 
         min-height: 100vh;
@@ -143,16 +156,7 @@ img{
     transition:all 0.4s;
 
 }
-.link-custom:hover::after{
-  width:100%;
-}
-/* project section */
-.card-custom .card-custom-image{
-  overflow:hidden;
-}
-.link-custom .card-custom-image img{
-    transition: all o.4s ease;
-}
+
 .card-custom:hover .card-custom-image img{
     transform: scale(1.1);
 }
