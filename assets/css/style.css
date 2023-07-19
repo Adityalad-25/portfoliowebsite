@@ -58,7 +58,7 @@ img{
     box-shadow :  0 0 0 2px #ceea5e; 
     cursor:pointer;
 }
-.text-center:hover{
+.text:hover{
     color:#deff58; 
 }
 .iconbox {
