@@ -55,7 +55,11 @@ img{
     transition: all 0.5s;
 }
 .shadow-effect:hover{
-    box-shadow :  0 0 0 2px #deff58; 
+    box-shadow :  0 0 0 2px #ceea5e; 
+    cursor:pointer;
+}
+.text-center:hover{
+    color:#deff58; 
 }
 .iconbox {
     width: 60px;
