@@ -28,6 +28,7 @@ a{
     transition: all 0.4s ease;
 }
 
+
 a:hover{
     color: var(--color-brand);
 }
@@ -78,7 +79,10 @@ img{
 
  .text-brand{
     color:#deff58;
+    
  }
+
+
 /* NAVBAR CSS */
 .navbar{
     background-color: #0b9aadd4;
@@ -116,7 +120,9 @@ img{
     }
 
 }
-
+@media (min-width:767px){
+    
+}
 @media(min-width:992px)
 {
     .explore{
