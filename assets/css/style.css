@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Josefin+Sans:wght@300;400;600;700&display=swap');
 :root {
-    --color-body: #b6cbce;
-    --color-heading: #eef3db;
-    --color-base: #033f47;
-    --color-base2: #022a30;
-    --color-brand: #e0f780;
-    --color-brand2: #deff58;
+    --color-body: #3cd0e7;
+    --color-heading: #37e2e2;
+    --color-base: #000000;
+    --color-base2: #000000;
+    --color-brand: #48e5c8;
+    --color-brand2: #58ecff;
     --sidbar-width: 240px;
     --font-base: "Bai Jamjuree";
 }
 
 body{
-    background-color:#022a30;
+    background: rgb(4,21,105);
+    background: linear-gradient(90deg, rgba(4,21,105,1) 0%, rgba(0,0,0,1) 100%);
+    /* background-color:#01142c; */
     color: #b6cbce;
     font-family: var(--font-base), sans-serif;
 
@@ -34,9 +36,11 @@ a:hover{
 }
 
 img{
-    width:100%;
+    width:99%;
 }
+
 /* helper class */
+
 
 .full-height{
     min-height: 100vh;
@@ -46,21 +50,21 @@ img{
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 2px solid rgba(255,255,255, 0.1);
+    border-bottom: 2px solid rgba(241, 233, 233, 0.1);
 }
 .bg-base{
-    background-color:#033f47;
+    background-color:#01335a64;
 }
 
 .shadow-effect{
     transition: all 0.5s;
 }
 .shadow-effect:hover{
-    box-shadow :  0 0 0 2px #ceea5e; 
+    box-shadow :  0 0 0 2px #5eeae3; 
     cursor:pointer;
 }
 .text:hover{
-    color:#deff58; 
+    color:#58f7ff; 
 }
 .iconbox {
     width: 60px;
@@ -69,41 +73,107 @@ img{
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    background-color:#e0f780;
+    background-color:#80f5f7;
     color:#022a30;
     
 }
-
+.title{
+    font-size: 2rem;
+}
 /* helper class */
 
 
  .text-brand{
-    color:#deff58;
-    
- }
+    color:#ffffff;
+}
 
+.anim-typewriter{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid rgb(62, 229, 235); 
+    animation: typewriter 5s steps(50) infinite, blink-caret 1s infinite;
+    animation-delay: 1.5s
+  }
+  /* .typewriter-container {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .anim-typewriter-title {
+    border-right: 0.15em solid rgb(62, 229, 235);
+    animation: typewriter 5s steps(13) infinite, blink-caret 2s infinite;
+  }
+*/
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(62, 229, 235);
+    }
+  } 
+
+ 
 
 /* NAVBAR CSS */
 .navbar{
-    background-color: #0b9aadd4;
+    /* background-color: #00a2ff52 !important;
+    background: transparent; */
+
+    /* background: rgb(4,21,105);
+background: linear-gradient(90deg, rgba(4,21,105,1) 0%, rgba(0,0,0,1) 100%); */
+background: rgb(3,23,117);
+background: radial-gradient(circle, rgba(3,23,117,1) 0%, rgba(0,0,0,1) 100%);
+border-right: #2edae3 !important;
 }
 .navbar .nav-link{
-    font-weight: 1000;
+    font-weight:3000;
     font-size: large;
-    color:white;
+    color:rgb(252, 254, 255);
 }
 .navbar .nav-link:hover{
-     color:#deff58;
+     /* color:#000000 !important;  */
+     font-weight: 200;
+     font-size: x-large;
+     background-color:#58f7ff;
+     color:#022a30;
+     border-radius: 10px;
           
 } 
+.adilogo{
+    color:#2edae3;
+    font-size: 2rem;
+    border-bottom: 2px solid #000708;
+}
 .navbar .nav-link.active{
-    color:#deff58;
+    color:#1ae1cd;
+}
+.navbar-toggler{
+   color:#000000;
+}
+.navbar-toggler-icon{
+    color:#f1e6e6;
+    background-color: #000000;
 }
 @media(max-width:768px){
     .explore{
         display:flex;
         padding:10px;
         color:black;
+    }
+    .social-icons-navbar {
+        display: none;
     }
   
 }
@@ -118,10 +188,16 @@ img{
         padding:20px;
         font-size: 30px;
     }
+    .social-icons-navbar {
+        display: none;
+    }
 
+  
+  
 }
 @media (min-width:767px){
-    
+   
+  
 }
 @media(min-width:992px)
 {
@@ -130,21 +206,33 @@ img{
         padding:10px;
     }
     .navbar{
-
-        min-height: 100vh;
+         min-height: 100vh;
         width:350px;
-        background-color: #0b9aadd4;
+        /* background-color:#69a7e4; */
         background-size: cover;
         background-position: center;
     }
     .navbar-brand img{
-        border:5px solid #deff58;
+        border:5px solid #012f30;
     }
-
+    .navbar .nav-link:hover{
+     color:#000000;
+     font-weight: 200;
+     font-size: x-large;  
+   } 
+   
+   button{
+      margin-left: 10px;
+   }
     /* CONTENT WRAPPER  */
    #content-wrapper{
-    padding-left: 350px;
+    padding-left: 350px;  
 }
+
+.social-icons-navbar a{
+    display:none !;
+}
+
 }
 /* btn */
 .btn{
@@ -154,32 +242,37 @@ img{
     font-size:x-large;
 }
 .btn-brand{
-    background-color:#033f47;
-    border-color: #deff58;
-    color:#deff58
+    background-color:#01335aaa;
+    border-color: #f6f6f6;
+    color:#58f9ff
 }
 .btn-brand:hover,
 .btn-brand:focus{
-   background-color:#deff58;
+   background-color:#58f7ff;
    color:#022a30;
 }
 
-/* .link-custom{
+ .link-custom{
     font-weight: 700;
     position:relative;
-
+    border:2px solid rgb(29, 164, 205);
+   padding:7px;
 }
-.link-custom::after{
+ .link-custom:hover{
+    background-color:#58f7ff;
+    color:#022a30;
+}
+/* .link-custom::after{
     content: "";
     width:100px;
     height: 2px;
-    background-color:#deff58;
+    background-color:#188384;
     position:absolute;
     left:0%;
     top:110%;
     transition:all 0.4s;
 
-} */
+}  */
 
 .card-custom:hover .card-custom-image img{
     transform: scale(1.1);
@@ -187,12 +280,12 @@ img{
 /* contact */
 #contact .form-control 
 {
-   background-color: #033f47;
-   border-color:#022a30;
+    background-color:#01335a6f;
+   border-color:#022c33;
    color:#f6f7f4;
 }
 #contact .form-control:focus{
-    border-color: #deff58;
+    border-color: #2edae3;
 }
 #contact .form-control::placeholder{
     color:#eef3db;
@@ -211,8 +304,41 @@ img{
     display:inline-flex;
     align-items: center;
     justify-content: center;
-    background-color:#033f47;
+    background-color:#01345a;
     border-radius: 100px;
     font-size: 35px;
     word-spacing: 2px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-top: 9px;
 }
+
+.footer{
+    margin-bottom: 20px;
+}
+
+.social-icons-navbar a{
+    width: 40px;
+    height: 40px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#01345a;
+    border-radius: 100px;
+    font-size: 35px;
+    word-spacing: 2px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-top: 40px;
+
+}
+
+/* test  */
+
+
+  
+ 
+
+
+
+
