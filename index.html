@@ -13,17 +13,19 @@
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    
 
     <!-- firebase cdn  -->
      <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   </head>
   <style>
     .submit{
         display:none;
-        background-color:  #022a30;
-        color:#deff58;
+        background: rgb(3,23,117);
+        background: radial-gradient(circle, rgba(3,23,117,1) 0%, rgba(0,0,0,1) 100%);
+        color:#61dbf3;
         font-weight:200px;
         font-size:1.5rem;
     }
@@ -35,39 +37,44 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> <!--fixed-top helps to fix the nav to top and allows to write home page content beside it-->
         <div class="container flex-lg-column ">
           <a class="navbar-brand mx-lg-auto mb-lg-4" href="#"> <!--mb-margin bottom lg- large screen 4 size-->
-            <span class="h3 fw-bold d-block d-lg-none">Aditya lad</span> <!-- h3 : heading 3,fw:font weight  d-lg-none: display on (lg)large devices none -->
+            <span class="h3 fw-bold d-block d-lg-none adilogo">Aditya lad</span> <!-- h3 : heading 3,fw:font weight  d-lg-none: display on (lg)large devices none -->
             <img class="d-none d-lg-block rounded-circle" src="./assets/images/img.jpg" alt=""> <!--d:display (lg) large devices -->
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto flex-lg-column text-lg-center ">  <!--ms:-margin start auto flex-lg-column: displays all links in one column one below other -->
+            <ul class="navbar-nav nav ms-auto flex-lg-column text-lg-center ">  <!--ms:-margin start auto flex-lg-column: displays all links in one column one below other -->
               <li class="nav-item">
-                <a class="nav-link active" href="#home">HOME</a>
+                <a class="nav-link active " href="#home">HOME</a>
+                <audio id="beep"  preload="auto">
+                  <source src="./assets/beep.mp3">
+                </audio>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#services">SERVICES</a>
+                <a class="nav-link active" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#services">MY SKILLS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#projects">PROJECTS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#about">ABOUT</a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link active" href="#">REVIEWS</a>
-              </li> -->
-              <!-- <li class="nav-item">
-                <a class="nav-link active " href="#">BLOG</a>
-              </li> -->
-              <li class="nav-item">
                 <a class="nav-link active" href="#contact">CONTACT</a>
               </li>
-              
-              
-            
+               
             </ul>
+        
+          </div>
+          <div class="col-auto">
+            <div class="social-icons-navbar">
+                <a href="https://github.com/Adityalad-25/Adityalad-25"><i class="lab la-github"></i></a>
+                 <a href="https://www.linkedin.com/in/aditya-lad-609586226"><i class="lab la-linkedin"></i></a>
+                <a href="https://www.instagram.com/"><i class="lab la-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="lab la-facebook"></i></a>
+                <a href="https://adityalad2003.hashnode.dev/"><i class="las la-blog"></i></a>
+            </div>
           </div>
         </div>
       </nav>
@@ -82,27 +89,116 @@
              <div class="container">
                  <div class="row">
                     <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold" data-aos="fade-up">I'm a <br/><span class="text-brand">Frontend Developer</span> From India,pune</h1>
-                        <p class="lead"data-aos="fade-up" data-aos-delay="300" > Hi, I am Aditya lad and i like to design user interfaces. </p>
-                        
+                        <h1 class="display-4 fw-bold" data-aos="fade-up"> 👋 I'm Aditya <br/><span class="text-brand anim-typewriter ">👨‍💻Web Developer</span> </h1>
+                         <h1>From India,Pune</h1>
+                        <p class="lead text-brand anim-typewriter-title "data-aos="fade-up" data-aos-delay="300" >
+                          <span class="typewriter-container">
+                            <span class="anim-typewriter-title">“Web Developer with a Passion for Creating Beautiful Websites.</span>
+                          </span>
+                        </p>
+                        </span>
                          <div  class="explore"   data-aos="fade-up" data-aos-delay="400">
                           <a href="#projects" class="btn btn-brand me-3">Explore my work</a>
                           <a download class=" btn btn-brand" href="./assets/AdityaLadRESUME.pdf" alt="Resume not available " width="104" height="142 ">Download Resume</a>
                          </div>
+                       
                         
                     </div>
                  </div>
              </div>
+            
          </section> 
+   </div>
+
+   <div id="content-wrapper">
         <!-- home page ends -->
+
+                   
+           <!-- ABOUT -->
+           <section id="about" class="full-height px-lg-5" >
+
+           
+            <div class="container ">
+             
+              
+              <div class="row pb-4" data-aos="fade-up">   
+                 <div class="col-lg-8">
+                   <h5 class="text-brand title">ABOUT</h5>
+                   <h1>My Education and Experience</h1>
+                 </div>
+             </div>
+               <div class="row gy-5">
+                  <div class="col-lg-6">
+
+                     <h3 class="mb-4"data-aos="fade-up" data-aos-delay="300">EDUCATION</h3>
+                    <div class="row gy-4">
+                            
+                            <div class="col-12"data-aos="fade-up" data-aos-delay="600" >
+                                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                                        <h5>B-TECH COMPUTER ENGINEERING</h5>
+                                        <p class="text-brand mb-3">PCCOE,pune(2021-2025)</p>
+                                        <p class="mb-0">
+                                          Cummulative GPA : 8.64 ( upto 4th semester)</p>
+                                      </div>
+                            </div>  
+                            <div class="col-12"data-aos="fade-up" data-aos-delay="800" >
+                                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                                        <h5>HSC-CLASS 12TH</h5>
+                                        <p class="text-brand mb-3">Swami Vivekanand Jr.College (2020-2021)</p>
+                                        <p class="mb-0">Percentage:96.33%</p>
+                                      </div>
+                            </div>  
+                            <div class="col-12"data-aos="fade-up" data-aos-delay="1000" >
+                                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                                        <h5>SSC-CLASS 10TH</h5>
+                                        <p class="text-brand mb-3">St.Mary's High School jalna(2019-2020)</p>
+                                        <p class="mb-0">Percentage:91.20%</p>
+                                      </div>
+                            </div>  
+                 </div>
+              </div>
+              <!-- Experience Section -->
+                  <div class="col-lg-6">
+                    
+                    <h3 class="mb-4"data-aos="fade-up" data-aos-delay="300">EXPERIENCE</h3>
+                    <div class="row gy-4">
+                            
+                            <div class="col-12"data-aos="fade-up" data-aos-delay="600" >
+                                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                                        <h5>WEBMASTER </h5>
+                                        <p class="text-brand mb-3">At ACM-Student Chapter pccoe(2022-2023)</p>
+                                        <p class="mb-0">Spearheaded the development and design of the college techfest website <strong>"Anantya"</strong> utilizing  HTML, CSS, JavaScript, and Bootstrap, resulting in an engaging and user-friendly interface for participants and visitors..!</p>
+                                      </div>
+                            </div> 
+                 </div>
+                 <br>
+                 <br>
+                    <div class="row gy-4">
+                            
+                            <div class="col-12"data-aos="fade-up" data-aos-delay="600" >
+                                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                                        <h5>WEB DEVELOPMENT INTERN</h5>
+                                        <p class="text-brand mb-3">OASIS INFOBYTE (August 2023)</p>
+                                            Developed Diverse Web Applications.
+                                           Technical Proficiency in ReactJS: Designed and constructed the calculator and to-do app using ReactJS, highlighting expertise in modern front-end development.Leveraged React's component-based architecture to build interactive and user-friendly interfaces for both applications, contributing to enhanced user experiences.</p>
+                                      </div>
+                            </div> 
+                 </div>
+               </div>
+
+          </div>
+      </div>
+         </section>
+         <!-- ABOUT ENDS -->
        
         <!-- Skills section -->
         <section id="services" class="full-height px-lg-5">
+        
           <div class="container">
             
               <div class="row pb-4" data-aos="fade-up">   
                   <div class="col-lg-8">
-                    <h5 class="text-brand"> My Skills</h5>
+                    <h5 class="text-brand title"> My Skills</h5>
                     <h1></h1>
                   </div>
               </div>
@@ -147,11 +243,12 @@
                    <!-- <div class="iconbox rounded-4 text-center">
                     <i class="las la-code"></i>
                      </div> -->
-                     <h2 class="mt-4 mb-2 text-center ">❖ Backend</h2>
+                     <h2 class="mt-4 mb-2 text-center ">❖ Database</h2>
                    <br/>
                    <div class="lang text-center">
                     <h4>🔸Mongodb Databse</h4>
                     <h4>🔸Firebase Database</h4>
+                    <h4>🔸Sql</h4>
                     <!-- <a href="" class="link-custom ">Read more</a> -->
                    </div>
                   
@@ -198,11 +295,11 @@
              <!-- <div class="iconbox rounded-4 text-center">
               <i class="las la-code"></i>
                </div> -->
-               <h1 class="mt-4 mb-2 text-center ">❖ Tech Stacks</h1>
+               <h1 class="mt-4 mb-2 text-center ">❖ Backend</h1>
              <br/>
              <div class="lang text-center">
-              <h5>🔸 MERN Stack</h5>
-              <h5>🔸 API</h5>
+              <h5>🔸 Nodejs</h5>
+              <h5>🔸 Php</h5>
               <h5></h5>
               <!-- <a href="" class="link-custom ">Read more</a> -->
              </div>
@@ -224,37 +321,12 @@
              
               <div class="row pb-4" data-aos="fade-up" >   
                 <div class="col-lg-8">
-                  <h5 class="text-brand">PROJECTS</h5>
+                  <h5 class="text-brand title">PROJECTS</h5>
                   <h1>My recents Projects </h1>
                 </div>
               </div>
              <div class="row gy-4 "> 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-custom rounded-4 bg-base shadow-effect">
-                  <div class="card-custom-image rounded-4">
-                    <img class="rounded-4" src="./assets/images/travel img.png" alt="">
-                  </div>
-                  <div class="card-custom-content p-4">
-                    <h4>Travelling website</h4>
-                    <p>Embark on a journey of wanderlust with my latest creation, a captivating travel website built using HTML and CSS! Immerse yourself in a visually stunning interface that showcases breathtaking destinations, enticing travel packages, and user-friendly navigation. Get ready to explore the world at your fingertips and unleash the traveler within! ✈️🌍 #TravelWebsite #HTML #CSS</p>
-                    <a href="https://adityalad-25.github.io/Travelwebsite/" class="link-custom">View Project</a>
-                  </div>
-                </div>
-              </div>
-             
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300" >
-                <div class="card-custom rounded-4 bg-base shadow-effect">
-                  <div class="card-custom-image rounded-4">
-                    <img class="rounded-4" src="./assets/images/Desktop View.png" alt="">
-                  </div>
-                  <div class="card-custom-content p-4">
-                    <h4>Git-Hub Profile Finder</h4>
-                    <p>GitHub Profile Finder is a web application built using HTML, CSS, and JavaScript, and it utilizes the GitHub API to search and display GitHub user profiles. The project aims to provide a simple and intuitive interface to find and explore GitHub users' information quickly and efficiently.</p>
-                    <a href="https://jocular-bombolone-10582d.netlify.app/" class="link-custom">View Project</a>
-                  </div>
-                </div>
-              </div>
-             
+               <!-- project 1 -->
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
                 <div class="card-custom rounded-4 bg-base shadow-effect">
                   <div class="card-custom-image rounded-4">
@@ -269,112 +341,79 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="col-md-6"data-aos="fade-up" data-aos-delay="800">
-                 <div class="card-custom rounded-4 bg-base shadow-effect">
+               <!-- project 1 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="card-custom rounded-4 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-4">
+                    <img class="rounded-4" src="./assets/images/To-Do-Web-App.png" alt="">
+                  </div>
+                  <div class="card-custom-content p-4">
+                    <h4>REACT-TO-DO-WEBAPP</h4>
+                    <p>Basic to-do app that enables a user to add daily tasks.
+                      The to-do web app which allow users to add new items to a list, and items added to a list must be visible. Also, a user can mark a task “complete” upon its successful completion, and these completed tasks must appear on a separate list, say Completed Tasks..
+
+                    </p>
+                    <a href="https://adityalad-25.github.io/React-TO-Do-WEBAPP/" class="link-custom">View Project</a>
+                  </div>
+                </div>
+              </div>
+               <!-- project 2 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300" >
+                <div class="card-custom rounded-4 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-4">
+                    <img class="rounded-4" src="./assets/images/Desktop View.png" alt="">
+                  </div>
+                  <div class="card-custom-content p-4">
+                    <h4>Git-Hub Profile Finder</h4>
+                    <p>GitHub Profile Finder is a web application built using HTML, CSS, and JavaScript, and it utilizes the GitHub API to search and display GitHub user profiles. The project aims to provide a simple and intuitive interface to find and explore GitHub users' information quickly and efficiently.</p>
+                    <a href="https://jocular-bombolone-10582d.netlify.app/" class="link-custom">View Project</a>
+                  </div>
+                </div>
+              </div>
+                  <!-- project 3 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-custom rounded-4 bg-base shadow-effect">
                   <div class="card-custom-image rounded-4">
                     <img class="rounded-4" src="./assets/images/travel img.png" alt="">
                   </div>
                   <div class="card-custom-content p-4">
                     <h4>Travelling website</h4>
                     <p>Embark on a journey of wanderlust with my latest creation, a captivating travel website built using HTML and CSS! Immerse yourself in a visually stunning interface that showcases breathtaking destinations, enticing travel packages, and user-friendly navigation. Get ready to explore the world at your fingertips and unleash the traveler within! ✈️🌍 #TravelWebsite #HTML #CSS</p>
-                    <a href="https://adityalad-25.github.io/Travelwebsite/" class="link-custom">View Prject</a>
+                    <a class="link-custom" href="https://adityalad-25.github.io/Travelwebsite/" >View Project</a>
                   </div>
                 </div>
-              </div> --> 
+              </div>
+            
+
+             
              </div>
             </div>
         </section>
         <!-- work ends -->
 
-         <!-- ABOUT -->
-         <section id="about" class="full-height px-lg-5" >
-            <div class="container">
-              
-              <div class="row pb-4" data-aos="fade-up">   
-                 <div class="col-lg-8">
-                   <h5 class="text-brand">ABOUT</h5>
-                   <h1>My Education and Experience</h1>
-                 </div>
-             </div>
-               <div class="row gy-5">
-                  <div class="col-lg-6">
+      
 
-                     <h3 class="mb-4"data-aos="fade-up" data-aos-delay="300">EDUCATION</h3>
-                    <div class="row gy-4">
-                            
-                            <div class="col-12"data-aos="fade-up" data-aos-delay="600" >
-                                    <div class="bg-base p-4 rounded-4 shadow-effect">
-                                        <h5>B-TECH COMPUTER ENGINEERING</h5>
-                                        <p class="text-brand mb-3">PCCOE,pune(2021-2025)</p>
-                                        <p class="mb-0">
-                                          Cummulative GPA : 8.64 ( upto 4th semester)</p>
-                                      </div>
-                            </div>  
-                            <div class="col-12"data-aos="fade-up" data-aos-delay="800" >
-                                    <div class="bg-base p-4 rounded-4 shadow-effect">
-                                        <h5>HSC-CLASS 12TH</h5>
-                                        <p class="text-brand mb-3">Swami Vivekanand Jr.College (2020-2021)</p>
-                                        <p class="mb-0">Percentage:96.33%</p>
-                                      </div>
-                            </div>  
-                            <div class="col-12"data-aos="fade-up" data-aos-delay="1000" >
-                                    <div class="bg-base p-4 rounded-4 shadow-effect">
-                                        <h5>SSC-CLASS 10TH</h5>
-                                        <p class="text-brand mb-3">St.Mary's High School jalna(2019-2020)</p>
-                                        <p class="mb-0">Percentage:91.20%</p>
-                                      </div>
-                            </div>  
-                 </div>
-              </div>
-              <!-- Experience Section -->
-                  <div class="col-lg-6">
-                    <h3 class="mb-4"data-aos="fade-up" data-aos-delay="300">EXPERIENCE</h3>
-                    <div class="row gy-4">
-                            
-                            <div class="col-12"data-aos="fade-up" data-aos-delay="600" >
-                                    <div class="bg-base p-4 rounded-4 shadow-effect">
-                                        <h5>WEBMASTER </h5>
-                                        <p class="text-brand mb-3">At ACM-Student Chapter pccoe(2022-2023)</p>
-                                        <p class="mb-0">Spearheaded the development and design of the college techfest website <strong>"Anantya"</strong> utilizing  HTML, CSS, JavaScript, and Bootstrap, resulting in an engaging and user-friendly interface for participants and visitors..!</p>
-                                      </div>
-                            </div>  
-                    
-                         <!-- <div class="col-12"data-aos="fade-up" data-aos-delay="800" >
-                                    <div class="bg-base p-4 rounded-4 shadow-effect">
-                                        <h5>Frontend Developer</h5>
-                                        <p class="text-brand mb-3">Clarion Technologies(2022-2023)</p>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, labore. Molestias ex eveniet perferendis cupiditate!</p>
-                                      </div>
-                         </div>  
-                            <div class="col-12"data-aos="fade-up" data-aos-delay="1000" >
-                                    <div class="bg-base p-4 rounded-4 shadow-effect">
-                                        <h5>UI/UX Designer</h5>
-                                        <p class="text-brand mb-3">Dribble(2022-2023)</p>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, labore. Molestias ex eveniet perferendis cupiditate!</p>
-                                    </div>
-                            </div>   -->
-                 </div>
-               </div>
+    <!-- text  -->
+      
+  
 
-          </div>
-      </div>
-         </section>
-         <!-- ABOUT ENDS -->
+    <!-- test ends  -->
+
+
 
          <!-- Contact me -->
-         
-         <section id="contact" class="full-height px-lg-5">
+          <section id="contact" class="full-height px-lg-5">
           <div class="container">
             
               <div class="row justify-content-center text-center " >   
                   <div class="col-lg-8 pb-4"  data-aos="fade-up" data-aos-delay="300" >
-                    <h5 class="text-brand">CONTACT</h5>
+                    <h5 class="text-brand title">CONTACT</h5>
                     <h1>Interested in working together? Let's talk</h1>
                   </div>
                    
                  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="500">
                     <!-- contactForm -->
-                    <div id="submit" class="alert alert-success submit" role="alert">
+                    <div id="submit btn-brand " class="alert alert-success submit" role="alert">
                       Form Submitted Successfully!
                     </div>
                   <form  id="contact" action="#" class="row g-lg-3 gy-3">
@@ -404,47 +443,49 @@
          <!-- Contact me ends -->
          
          <!-- footer -->
-      <footer class="py-5"> <!--py-padding top and bottom-->
-           <div class="container">
-            <div class="row gy-4 justify-content-between px-lg-5">
-                <div class="col-auto">
-                  <p class="mb-0">Designed with <i class="las la-heart"></i> by Aditya lad</p>   <!--mb-margin bottom-->
+      <footer class="py-5 align-content-center"> <!--py-padding top and bottom-->
+           <div class="container ">
+            <div class="row gy-4 justify-content-center px-lg-5">
+                  <div class="col-auto">
+                  <p class="mb-0 footer">Designed with ❤️ by Aditya lad</p>   <!--mb-margin bottom-->
                 </div>
-                <div class="col-auto">
-                  <div class="social-icons">
-                      <a href="https://github.com/Adityalad-25/Adityalad-25"><i class="lab la-github"></i></a>
-                <a href="https://www.linkedin.com/in/aditya-lad-609586226"><i class="lab la-linkedin"></i></a>
-                      <a href="https://www.instagram.com/"><i class="lab la-instagram"></i></a>
-                      <a href="https://www.facebook.com/"><i class="lab la-facebook"></i></a>
-                  </div>
+                </div>
+            <div class="row gy-4 justify-content-center px-lg-5">
+             <div class="col-auto">
+              <div class="social-icons">
+                <a href="https://github.com/Adityalad-25/Adityalad-25"><i class="lab la-github"></i></a>
+                 <a href="https://www.linkedin.com/in/aditya-lad-609586226"><i class="lab la-linkedin"></i></a>
+                <a href="https://www.instagram.com/"><i class="lab la-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="lab la-facebook"></i></a>
+                <a href="https://adityalad2003.hashnode.dev/"><i class="las la-blog"></i></a>
+            </div>
+             </div>
+             
                 </div>
             </div>
-           </div>
-      
-
      </footer>
 
          <!-- footer ends here -->
 
    </div>
  <!-- CONTENT WRAPPER ENDS HERE -->
-  
-  
-  
-  
-  
-  
-  
-    <!-- bootstrap js link -->
-    <script src="./assets/js/app.js"></script>
 
+    
+    <script src="./assets/js/app.js"></script>
+       
+    <script>var beepOne = $("#beep")[0];
+      $(".nav a")
+        .mouseenter(function() {
+          beepOne.play();
+        });
+      </script>
+    <!-- bootstrap js link -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
-
-    <!-- aos:- animate on scroll js -->
+     <!-- aos:- animate on scroll js -->
    <script src="./assets/js/aos.js"></script> 
     <script src="./assets/js/main.js"></script>
-
+   
     <!-- scriptjs -->
 
    
