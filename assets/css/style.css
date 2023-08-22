@@ -62,9 +62,15 @@ img{
 .shadow-effect:hover{
     box-shadow :  0 0 0 2px #5eeae3; 
     cursor:pointer;
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
 }
 .text:hover{
     color:#58f7ff; 
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
 }
 .iconbox {
     width: 60px;
@@ -87,6 +93,10 @@ img{
     color:#ffffff;
 }
 
+.resume
+{
+    border-color:linear-gradient(to left, #743ad5, #d53a9d) !important;
+}
 .anim-typewriter{
     display: inline-block;
     overflow: hidden;
@@ -149,6 +159,9 @@ border-right: #2edae3 !important;
      background-color:#58f7ff;
      color:#000505;
      border-radius: 10px;
+     color: #ffee10;
+     box-shadow: 0 0 5px #ffee10;
+     text-shadow: 0 0 5px #ffee10;
           
 } 
 .adilogo{
@@ -253,6 +266,9 @@ border-right: #2edae3 !important;
 .btn-brand:focus{
    background-color:#58f7ff;
    color:#022a30;
+   /* color: #ffee10; */
+   box-shadow: 0 0 50px #f2ed5b;
+   /* text-shadow: 0 0 5px #ffee10; */
 }
 
  .link-custom{
@@ -334,6 +350,17 @@ border-right: #2edae3 !important;
     margin-left: 20px;
     margin-top: 40px;
 
+}
+
+.social-icons-navbar a:hover{
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+}
+.social-icons a:hover{
+    color: #ffee10;
+    box-shadow: 0 0 8px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
 }
 
 /* test  */
@@ -482,4 +509,17 @@ border-right: #2edae3 !important;
     to {
         transform: translateY(-2000px);
     }
+}
+
+.counter-img{
+    width:100px;
+    height:50px;
+    background-color: rgba(0,0,0,0);
+    background-color: transparent;
+    
+}
+
+.title-counter:hover{
+    color:white;
+    cursor:pointer
 }
