@@ -182,6 +182,14 @@ border-right: #2edae3 !important;
 .adi-nav-img .rounded-circle{
     border-color: 3px solid #1ae1cd !important;
 }
+
+.repo-link{
+    margin-left: 20px;
+   margin-top: 5px !important;
+    padding: 3px;
+    font-size: 30px;
+    font-weight: 900;
+}
 @media(max-width:768px){
     .explore{
         display:flex;
